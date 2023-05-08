@@ -1,0 +1,239 @@
+// import
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;500;700;900&display=swap');
+
+@import 'mixins';
+
+@import 'reset';
+
+
+// content
+    .background{
+        .container{
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            overflow-y: scroll;
+            // MAIN
+            main{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                #aboutme{
+                    margin: 8% 5%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .foto{
+                        justify-self: center;
+                        border-radius: 20px;
+                        box-shadow: 0px 0px 15px white;
+                        animation: colorwheel2 10s linear infinite;
+                    }
+                    p{
+                        text-align: center;
+                        line-height: 4.2rem;
+                        font-weight: 500;
+                        margin: 50px;
+                        // animation: colorwheel 10s linear infinite;
+                    }
+                }
+                #skills{
+                    display: flex;
+                    justify-content: space-evenly;
+                    width: 100%;
+                    div{
+                        font-size: 3rem;
+                        h3{
+                            margin-bottom: 2rem;
+                            font-size: 2rem;
+                            font-family: 'Press Start 2P', cursive;
+                        }
+                        .skill-line{
+                            background: rgb(187,184,255);
+                            background: linear-gradient(90deg, rgba(187,184,255,1) 0%, rgba(149,82,255,1) 50%, rgba(254,141,255,1) 75%, rgba(255,255,255,0) 75%);
+                            background-size: 200%;
+                            // background-size: 170%;
+                            border-radius: 1rem;
+                            height: 5px;
+                        }
+                    }
+                }
+            }
+
+            // FOOTER
+            footer{
+                display: flex;
+                justify-content: center;
+                gap: 2rem;
+                margin: 3rem;
+                width: 100%;
+                a{
+                    text-decoration: none;
+                    color: white;
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+
+
+// Responsiveness
+// mobile
+@include responsive(mobile){
+    #aboutme{
+        flex-direction: column;
+        .foto{
+            width: 70%;
+        }
+        #main-txt{
+            font-size: 2rem;
+        }
+    }
+    #skills{
+        align-items: center;
+        height: 500px;
+        flex-direction: column;
+        /* margin: 3% 0; */
+        #coding{
+            width: 50%;
+        }
+        #language{
+            width: 50%;
+        }
+    }
+    #html{
+        // background-position: -250px 0;
+        // width: 350px;
+        width: 90%;
+    }
+    #css{
+        // background-position: -320px 0;
+        // width: 295px;
+        width: 75%;
+    }
+    #sass{
+        // background-position: -370px 0;
+        // width: 250px;
+        width: 63%;
+    }
+    #bootstrap{
+        // background-position: -470px 0;
+        // width: 135px;
+        width: 35%;
+    }
+    #german{
+        // background-position: -243px 0;
+        // width: 390px;
+        width: 96%;
+    }
+    #english{
+        // background-position: -243px 0;
+        // width: 360px;
+        width: 85%;
+    }
+}
+
+// tablet
+@include responsive(tablet){
+    #aboutme{
+        flex-direction: column;
+        .foto{
+            width: 50%;
+        }
+        #main-txt{
+            font-size: 2.5rem;
+        }
+    }
+    #skills{
+        align-items: center;
+        height: 500px;
+        flex-direction: column;
+        margin: 3% 0;
+        #coding{
+            width: 50%;
+        }
+        #language{
+            width: 50%;
+        }
+    }
+    #html{
+        // background-position: -250px 0;
+        // width: 350px;
+        width: 90%;
+    }
+    #css{
+        // background-position: -320px 0;
+        // width: 295px;
+        width: 75%;
+    }
+    #sass{
+        // background-position: -370px 0;
+        // width: 250px;
+        width: 63%;
+    }
+    #bootstrap{
+        // background-position: -470px 0;
+        // width: 135px;
+        width: 35%;
+    }
+    #german{
+        // background-position: -243px 0;
+        // width: 390px;
+        width: 96%;
+    }
+    #english{
+        // background-position: -243px 0;
+        // width: 360px;
+        width: 85%;
+    }
+}
+
+// desktop
+@include responsive(desktop){
+    .foto{
+        width: 35%;
+    }
+    #main-txt{
+        font-size: 3rem;
+    }
+    #skills{
+        margin: 8% 0;
+    }
+    #html{
+        // background-position: -250px 0;
+        width: 350px;
+    }
+    #css{
+        // background-position: -320px 0;
+        width: 295px;
+    }
+    #sass{
+        // background-position: -370px 0;
+        width: 250px;
+    }
+    #bootstrap{
+        // background-position: -470px 0;
+        width: 135px;
+    }
+    #german{
+        // background-position: -243px 0;
+        width: 390px;
+    }
+    #english{
+        // background-position: -243px 0;
+        width: 360px;
+    }
+}
+
+// Animations
+a:hover{
+    animation: colorwheel3 7s ease-in infinite;
+}
+
+
+
+
+// benny's burger, tindog, sweetshop

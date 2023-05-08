@@ -1,0 +1,197 @@
+// import
+
+// reset
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// Font-Size
+:root{
+    font-size: 62.5%;
+}
+
+// background
+.container::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
+
+body{
+    background-color: rgb(24, 24, 24);
+}
+.background{
+    background-image: url(../../assets/8351153.gif);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    .container{
+        background-color: rgba(0, 0, 0, 0.842);
+        border-radius: 20px;
+        width: 70vw;
+        height: 90%;
+        backdrop-filter: blur(7px);
+        box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.4);
+        -ms-overflow-style: none; /* for Internet Explorer, Edge */
+        scrollbar-width: none; /* for Firefox */
+        // HEADER
+        header{
+            margin: 3rem;
+            width: 100%;
+            nav{
+            display: flex;
+            justify-content: space-evenly;
+                div{
+                    a{
+                        text-decoration: none;
+                        color: white;
+                        font-size: 1.5rem;
+                        font-weight: 500;
+                        border-radius: 5px;
+                        font-family: 'Press Start 2P', cursive;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// burger menu icon
+summary {list-style: none}
+summary::-webkit-details-marker {display: none; }
+
+
+details{
+    summary::before { 
+        font-family: 'fontawesome';
+        content: "\f0c9"; 
+        color: white; 
+      }
+}
+  
+  details[open]{
+    summary::before { 
+        font-family: 'fontawesome';
+        content: "\f0c9"; 
+        color: white; 
+      }
+  }
+
+
+
+// Responsiveness
+// mobile
+@include responsive(mobile){
+    header{
+        display: flex;
+        justify-content: center;
+        nav{
+            flex-direction: column;
+        }
+        #navDesktop{
+            display: none;
+        }
+        #dropdown{
+            font-size: 3rem;
+        }
+    }
+}
+
+// tablet
+@include responsive(tablet){
+    header{
+        display: flex;
+        justify-content: center;
+        nav{
+            flex-direction: column;
+        }
+        #navDesktop{
+            display: none;
+        }
+        #dropdown{
+            font-size: 3rem;
+        }
+    }
+}
+
+// desktop
+@include responsive(desktop){
+    nav{
+        flex-direction: row;
+    }
+    #dropdown{
+        display: none;
+    }
+}
+
+
+// animations
+@keyframes header {
+    from{
+        color: white;
+
+    }
+    to{
+        color: rgb(149, 0, 255);
+    }
+}
+
+
+@keyframes colorwheel {
+    0%{
+        color: white;
+    }
+    30%{
+        color: rgb(70, 70, 255);
+    }
+    60%{
+        color: rgb(149, 0, 255);
+    }
+    90%{
+        color: rgb(255, 0, 0);
+    }
+    100%{
+        color: white;
+    }
+}
+
+@keyframes colorwheel2 {
+    0%{
+        box-shadow: 0px 0px 10px white;
+    }
+    30%{
+        box-shadow: 0px 0px 10px rgb(70, 70, 255);
+    }
+    60%{
+        box-shadow: 0px 0px 10px rgb(149, 0, 255);
+    }
+    90%{
+        box-shadow: 0px 0px 10px rgb(255, 70, 70);
+    }
+    100%{
+        box-shadow: 0px 0px 10px white;
+    }
+}
+
+@keyframes colorwheel3 {
+    0%{
+        text-shadow: 2px 2px 2px rgb(70, 70, 255);
+    }
+    40%{
+        text-shadow: 2px 2px 2px rgb(149, 0, 255);
+    }
+    80%{
+        text-shadow: 2px 2px 2px rgb(255, 0, 0);
+    }
+    100%{
+        text-shadow: 2px 2px 2px rgb(70, 70, 255);
+    }
+}

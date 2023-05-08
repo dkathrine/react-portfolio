@@ -1,0 +1,119 @@
+// import
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;500;700;900&display=swap');
+
+@import 'mixins';
+
+@import 'reset';
+
+// content
+.background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    main{
+        a{
+            text-decoration: none;
+            color: white;
+            div{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+
+                border: 15px solid white;
+                border-radius: 10px;
+
+                font-family: 'Press Start 2P', cursive;
+
+
+                background-color: rgba(0, 0, 0, 0.521);
+                text-shadow: 0px 0px 15px white;
+                box-shadow: 0px 0px 15px white, 0px 0px 15px white inset;
+                filter: blur(0.5px) brightness(1);
+            }
+            div:hover{
+                // animation: name duration timing-function delay iteration-count direction fill-mode;
+                animation: flicker 2s ease-in infinite;
+            }
+        }
+    }
+}
+
+// desktop
+@include responsive(desktop){
+    .sign{
+        width: 800px;
+        height: 500px;
+        font-size: 1.7rem;
+        line-height: 8rem;
+        h1{
+            font-size: 5rem;
+        }
+    }
+}
+
+// tablet
+@include responsive(tablet){
+    .sign{
+        width: 500px;
+        height: 300px;
+        font-size: 1rem;
+        line-height: 6rem;
+        h1{
+            font-size: 4rem;
+        }
+        
+    }
+}
+
+// mobile
+@include responsive(mobile){
+    .sign{
+        width: 300px;
+        height: 500px;
+        font-size: 1.7rem;
+        line-height: 7rem;
+        text-align: center;
+        h1{
+            font-size: 3rem;
+        }
+        
+    }
+}
+
+@keyframes flicker {
+    0% {
+      filter: blur(0.5px) brightness(1);
+    }
+    3% {
+      filter: blur(0.5px) brightness(0.1);
+    }
+    6% {
+      filter: blur(0.5px) brightness(0.1);
+    }
+    7% {
+      filter: blur(0.5px) brightness(1);
+    }
+    8% {
+      filter: blur(0.5px) brightness(0.1);
+    }
+    9% {
+      filter: blur(0.5px) brightness(1);
+    }
+    10% {
+      filter: blur(0.5px) brightness(0.1);
+    }
+    20% {
+      filter: blur(0.5px) brightness(1);
+    }
+    50% {
+      filter: blur(0.5px) brightness(1);
+    }
+    99% {
+      filter: blur(0.5px) brightness(0.1);
+    }
+    100% {
+      filter: blur(0.5px) brightness(1);
+    }
+  }

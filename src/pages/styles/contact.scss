@@ -1,0 +1,70 @@
+// import
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;500;700;900&display=swap');
+
+@import 'mixins';
+
+@import 'reset';
+
+// content
+.background{
+    .container{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        main{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .form{
+                color: white;
+                font-family: 'Roboto', sans-serif;
+                font-size: 3rem;
+                form{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    input, textarea{
+                        margin: 5px;
+                        padding: 5px;
+                    }
+                    input[type=submit]{
+                        color: white;
+                        font-weight: bold;
+                        background-color: #9552ff;
+                        border: none;
+                        border-radius: 10px;
+                        padding: 10px 40px;
+                    }
+                    input[type=submit]:hover{
+                        animation: colorwheel2 7s ease-in infinite;
+                    }
+                    input[type=submit]:active{
+                        background-color: black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Responsiveness
+// mobile
+@include responsive(mobile){
+    textarea{
+        width: 90%;
+    }
+}
+// tablet
+@include responsive(tablet){
+    textarea{
+        width: 70%;
+    }
+}
+
+a:hover{
+    animation: colorwheel3 7s ease-in infinite;
+}
+
+
