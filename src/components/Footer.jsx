@@ -32,10 +32,10 @@ const Footer = () => {
             {/* Footer */}
             <footer className='mt-10'>
                 <div>
-                    <a href="https://github.com/dkathrine"><FaGithub /></a>
+                    <a href="https://github.com/dkathrine" target='_blank' rel='noreferrer'><FaGithub /></a>
                 </div>
                 <div>
-                    <a href="https://www.linkedin.com/in/kathrine-beuth-39a8b9250/"><FaLinkedin /></a>
+                    <a href="https://www.linkedin.com/in/kathrine-beuth-39a8b9250/" target='_blank' rel='noreferrer'><FaLinkedin /></a>
                 </div>
                 <div>
                     <button onClick={handleEmailCopy} title={isCopied ? 'Email copied!' : 'Copy Email'}><HiMail className='text-4xl' /></button>
