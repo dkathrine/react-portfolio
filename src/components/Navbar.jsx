@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react'
 import '../pages/styles/projects.scss'
+import { GiHamburgerMenu } from 'react-icons/gi'
 
 const Navbar = ({ isMain }) => {
     const [isMainPageRendered, setIsMainPageRendered] = useState(false);
+    const [open, setOpen] = useState(false);
 
 
     useEffect(() => {
@@ -33,9 +35,12 @@ const Navbar = ({ isMain }) => {
                         <a href="./">Back to Landing</a>
                     </div>
                 </nav>
-                <details id="dropdown">
-                    <summary></summary>
-                    <nav>
+
+                <div style={{ display: "flex", flexDirection: "column" }}>
+
+                    <GiHamburgerMenu id='dropdown' onClick={() => setOpen(prev => !prev)} style={{ fontSize: "25px", alignSelf: "center" }} />
+
+                    <nav style={open ? { "display": "block" } : { "display": "none" }} >
                         {
                             isMainPageRendered ? (
                                 <>
@@ -55,7 +60,8 @@ const Navbar = ({ isMain }) => {
                             <a href="./">Back to Landing</a>
                         </div>
                     </nav>
-                </details>
+                </div>
+
             </header>
         </>
     )
