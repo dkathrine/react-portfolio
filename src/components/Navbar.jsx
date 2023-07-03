@@ -38,7 +38,7 @@ const Navbar = ({ isMain }) => {
 
                 <div style={{ display: "flex", flexDirection: "column" }}>
 
-                    <GiHamburgerMenu id='dropdown' onClick={() => setOpen(prev => !prev)} style={{ fontSize: "25px", alignSelf: "center" }} />
+                    <GiHamburgerMenu id='dropdown' onClick={() => setOpen(prev => !prev)} className={open ? 'tilted' : ''} style={{ fontSize: "25px", alignSelf: "center" }} />
 
                     <nav style={open ? { "display": "block" } : { "display": "none" }} >
                         {

@@ -195,3 +195,8 @@ details{
         text-shadow: 2px 2px 2px rgb(70, 70, 255);
     }
 }
+
+.tilted {
+    transform: rotate(180deg);
+    transition: transform 0.25s;
+  }
