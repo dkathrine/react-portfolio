@@ -11,6 +11,23 @@ const ProjectsPage = () => {
                 <Navbar />
                 {/* <!-- main --> */}
                 <div id="scroll">
+                    {/* <!-- very first card --> */}
+                    <div class="card">
+                        <a href="https://localtrainer.vercel.app" target="_blank" rel="noreferrer">
+                            <TbArrowNarrowRight /> Watch Project
+                        </a>
+
+                        <div class="bar">
+                            <div class="emptybar"></div>
+                            <div class="filledbar"></div>
+                        </div>
+
+                        <div class="iframe">
+                            <iframe src="https://localtrainer.vercel.app"
+                                frameborder="0" title='train-me'></iframe>
+                        </div>
+                        <a href="https://github.com/TheUnterhemd/FinalProjeckt" target="_blank" rel="noreferrer"><FaGithub /></a>
+                    </div>
                     {/* <!-- first card --> */}
                     <div class="card">
                         <a href="https://bobs-burger.vercel.app" target="_blank" rel="noreferrer">
@@ -26,7 +43,7 @@ const ProjectsPage = () => {
                             <iframe src="https://bobs-burger.vercel.app"
                                 frameborder="0" title='bobs-burger'></iframe>
                         </div>
-                        <a href="#" target="_blank"><FaGithub /></a>
+                        <a href="#" target="_blank" ><FaGithub /></a>
                     </div>
                     {/* <!-- second card --> */}
                     <div class="card">
